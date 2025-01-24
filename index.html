@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <!-- Importimi i fontit Josefin Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Glide.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <h1 class="logo">hab+dash</h1>
+        <nav class="nav">
+            <button class="menu-toggle" aria-label="Open Menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Add color to your<br>masterpiece</h1>
+            <button class="btn">Shop Now</button>
+        </div>
+    </section>
+
+
+
+
+    <!-- Product Section 1 -->
+    <section class="product-section">
+        <div class="product-card">
+            <img src="images/Link (2).png" alt="Glide">
+            <p>GLIDE</p>
+        </div>
+        <div class="product-card">
+            <img src="images/images (5).png" alt="Magnetic Core Bobbin">
+            <p>MAGNETIC CORE BOBBIN</p>
+        </div>
+        <div class="product-card">
+            <img src="images/3_Stabilizer-min 1.png" alt="Premium Stabilizer">
+            <p>PREMIUM STABILIZER</p>
+        </div>
+    </section>
+
+    <!-- Product Section 2 (Carousel me Glide.js) -->
+    <section class="products">
+        <h2>FEATURED PRODUCTS</h2>
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide">
+                        <div class="product">
+                            <img src="images/image 2.png" alt="Embroidery Stabilizer">
+                            <p>EMBROIDERY STABILIZER</p>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <div class="product">
+                            <img src="images/image1.png.png" alt="Cubbie Grey Elephant">
+                            <p>CUBBIE GREY ELEPHANT</p>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <div class="product">
+                            <img src="images/image3(2).png" alt="Kimberbell Cup of Cheer">
+                            <p>KIMBERBELL CUP OF CHEER</p>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <div class="product">
+                            <img src="images/image4.png.png" alt="Kimberbell Two Scoops">
+                            <p>KIMBERBELL TWO SCOOPS</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Butonat e navigimit -->
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide_arrow glide_arrow--left" data-glide-dir="<">&#10094;</button>
+                <button class="glide_arrow glide_arrow--right" data-glide-dir=">">&#10095;</button>
+            </div>
+            <!-- Pikat e navigimit -->
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+                <button class="glide__bullet" data-glide-dir="=3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Your Company. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Glide.js JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
+    <script>
+        // Inicializimi i Glide.js
+        new Glide('.glide', {
+            type: 'carousel', // Lloji i karuselit
+            perView: 3, // Numri i produkteve të shfaqura njëkohësisht
+            gap: 20, // Hapësira midis produkteve
+            breakpoints: {
+                1024: {
+                    perView: 2 // 2 imazhe në tablet
+                },
+                600: {
+                    perView: 1 // 1 imazh në mobile
+                }
+            }
+        }).mount();
+    </script>
+
+</body>
+</html>
